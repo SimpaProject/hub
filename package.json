@@ -1,0 +1,43 @@
+{
+  "name": "hub",
+  "description": "Simpa Hub",
+  "author": "Simpa",
+  "version": "0.1.0",
+  "main": "start.js",
+  "keywords": [
+    "hub",
+    "Simpa",
+    "messaging",
+    "chat"
+  ],
+  "scripts": {
+    "pretest": "npm run eslint",
+    "eslint": "./node_modules/eslint/bin/eslint.js --cache ./src",
+    "testnet": "./scripts/prepare.sh testnet",
+    "livenet": "./scripts/prepare.sh livenet",
+    "start": "node start.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "git://github.com/SimpaProject/hub.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/SimpaProject/hub/issues"
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/js"
+  },
+  "dependencies": {
+    "core": "git+https://github.com/SimpaProject/SimpaCore.git",
+    "relay": "git+https://github.com/SimpaProject/relay.git",
+    "express": "^4.16.1",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.5.0"
+  }
+}
